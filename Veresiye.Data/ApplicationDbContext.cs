@@ -23,7 +23,10 @@ namespace Veresiye.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            var userBuilder = new UserBuilder();
+            var userBuilder = new UserBuilder(modelBuilder.Entity<User>());
+            var companyBuilder = new CompanyBuilder(modelBuilder.Entity<Company>());
+            var activityBuilder = new ActivityBuilder(modelBuilder.Entity<Activity>());
+
         }
     }
 }
