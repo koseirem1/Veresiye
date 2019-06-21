@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Veresiye.Model;
 using Veresiye.Service;
 
 namespace Veresiye.UI
@@ -15,9 +16,11 @@ namespace Veresiye.UI
     {
         private readonly ICompanyService companyService;
        
+        public FrmMain MasterForm { get; set; }
         public FrmCompanies(ICompanyService companyService)
         {
             this.companyService = companyService;
+           
             InitializeComponent();
         }
 
@@ -34,19 +37,27 @@ namespace Veresiye.UI
 
         private void BtnEkle_Click(object sender, EventArgs e)
         {
-           
-          
-
+            MasterForm.ShowFrmCompanyAdd();
+       
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            //companyService.Update();
+            MasterForm.ShowFrmCompanyUpdate();
+          
         }
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            //companyService.Delete();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int sil = int.Parse(this.dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+               
+                companyService.Delete(sil);
+                
+
+            }
+
         }
     }
 }

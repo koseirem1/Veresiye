@@ -147,6 +147,7 @@
             this.btnEkle.TabIndex = 12;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // FrmCompanyAdd
             // 
