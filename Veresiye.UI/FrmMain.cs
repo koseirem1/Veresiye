@@ -36,7 +36,7 @@ namespace Veresiye.UI
             this.frmCompanies.MdiParent = this;
             this.frmCompanyAdd.MdiParent = this;
            
-            this.frmCompanies.MasterForm = this;
+         
             this.frmCompanyUpdate.MdiParent = this;
           
            

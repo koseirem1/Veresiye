@@ -169,6 +169,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCompanyUpdate";
             this.Text = "FrmCompanyUpdate";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCompanyUpdate_FormClosing);
+            this.Load += new System.EventHandler(this.FrmCompanyUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
