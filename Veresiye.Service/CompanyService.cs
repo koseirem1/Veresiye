@@ -43,6 +43,8 @@ namespace Veresiye.Service
           
         }
 
+       
+
         public void Insert(Company company)
         {
             
@@ -68,6 +70,7 @@ namespace Veresiye.Service
         void Update(Company company); //crud işlemleri
         void Delete(int id); //crud işlemleri
         IEnumerable<Company> GetAll();
+      
         Company Get(int id);
     }
 }

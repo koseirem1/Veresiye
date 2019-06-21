@@ -72,11 +72,14 @@ namespace Veresiye.UI
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                int sil = int.Parse(this.dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-               
-                companyService.Delete(sil);
-                LoadCompanies();
+                var result = MessageBox.Show("Silmek istediğinize emin misiniz?" ,"Silme İşlemi",MessageBoxButtons.YesNo);
+                if(result==DialogResult.Yes)
+                {
+                    int sil = int.Parse(this.dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
 
+                    companyService.Delete(sil);
+                    LoadCompanies();
+                }
             }
             else
             {
