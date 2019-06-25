@@ -38,9 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -145,14 +145,15 @@
             this.panel1.Size = new System.Drawing.Size(842, 116);
             this.panel1.TabIndex = 26;
             // 
-            // btnAdd
+            // btnDelete
             // 
-            this.btnAdd.Location = new System.Drawing.Point(76, 89);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 26;
-            this.btnAdd.Text = "Yeni İşlem...";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(261, 89);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 28;
+            this.btnDelete.Text = "Sil...";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnEdit
             // 
@@ -162,15 +163,17 @@
             this.btnEdit.TabIndex = 27;
             this.btnEdit.Text = "Düzenle...";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
-            // btnDelete
+            // btnAdd
             // 
-            this.btnDelete.Location = new System.Drawing.Point(261, 89);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 28;
-            this.btnDelete.Text = "Sil...";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(76, 89);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 26;
+            this.btnAdd.Text = "Yeni İşlem...";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // dataGridView1
             // 

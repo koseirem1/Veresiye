@@ -36,6 +36,8 @@ namespace Veresiye.UI
             builder.RegisterType<FrmCompanies>().As<FrmCompanies>();
             builder.RegisterType<FrmCompanyAdd>().As<FrmCompanyAdd>();
             builder.RegisterType<FrmCompanyUpdate>().As<FrmCompanyUpdate>();
+            builder.RegisterType<FrmActivitiyAdd>().As<FrmActivitiyAdd>();
+            builder.RegisterType<FrmActivitiyEdit>().As<FrmActivitiyEdit>();
             var container = builder.Build();
 
             using (var scope = container.BeginLifetimeScope())
